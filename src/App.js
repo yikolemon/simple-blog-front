@@ -5,9 +5,9 @@ import {
   Box,
   Flex,
 } from '@chakra-ui/react';
-import { ColorModeSwitcher } from './ColorModeSwitcher';
 import Header from './layout/Header';
 import theme from './thmem';
+import LeftContent from './layout/LeftContent';
 
 function App() {
   return (
@@ -16,13 +16,13 @@ function App() {
         <Flex direction="column" height="100vh">
           <Header/>
           <Flex height="100%">
-            <Box flex="1" p={4} bg="gray.200">
-              中左部分
+            <Box flex="1" bg="gray.200">
+              <LeftContent/>
             </Box>
-            <Box flex="4" p={4} bg="green.200">
+            <Box flex="3"  bg="green.200">
               中宽部分
             </Box>
-            <Box flex="1" p={4} bg="gray.200">
+            <Box flex="1"  bg="gray.200">
               中右部分
             </Box>
           </Flex>

@@ -8,6 +8,7 @@ import {
 import Header from './layout/Header';
 import theme from './thmem';
 import LeftContent from './layout/LeftContent';
+import RightContent from './layout/RightContent';
 
 function App() {
   return (
@@ -23,7 +24,7 @@ function App() {
               中宽部分
             </Box>
             <Box flex="1"  bg="gray.200">
-              中右部分
+              <RightContent/>
             </Box>
           </Flex>
         </Flex>

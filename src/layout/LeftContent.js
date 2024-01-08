@@ -1,18 +1,19 @@
 // LeftContent.js
-
-import React from 'react';
+import React, { useState } from 'react';
 import { Box, Image, Flex } from '@chakra-ui/react';
 import me from '../images/me.png';
 import CustomButton from '../components/basic/CustomButton';
 
-const menuItems = ['文章', '闲话', '关于'];
+const menuItems = ['文章', '闲话', '留言', '关于'];
 
 const LeftContent = () => {
+
+  const [activeMenuItem, setActiveMenuItem] = useState(menuItems[0]);
+
   return (
     <Flex
       direction="column"
       bg="#f9f9f9"
-      color="myGray"
       color="#777"
       boxShadow="md"
       p={4}
@@ -28,7 +29,10 @@ const LeftContent = () => {
       />
       <Box mt={4}>
         {menuItems.map((item, index) => (
-          <CustomButton key={index}>{item}</CustomButton>
+          <CustomButton
+            key={index}
+            isActive={item === activeMenuItem}
+          >{item}</CustomButton>
         ))}
       </Box>
     </Flex>

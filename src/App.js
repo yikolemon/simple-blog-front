@@ -13,17 +13,17 @@ import RightContent from './layout/RightContent';
 function App() {
   return (
     <ChakraProvider theme={theme}>
-      <Container maxW="80%" mt={0} boxShadow="xl" p={0}>
+      <Container maxW="85%" mt={0} boxShadow="xl" p={0}>
         <Flex direction="column" height="100vh">
           <Header/>
           <Flex height="100%">
-            <Box flex="1" bg="gray.200">
+            <Box flex="4" bg="gray.200">
               <LeftContent/>
             </Box>
-            <Box flex="3"  bg="green.200">
+            <Box flex="14"  bg="green.200">
               中宽部分
             </Box>
-            <Box flex="1"  bg="gray.200">
+            <Box flex="5"  bg="gray.200">
               <RightContent/>
             </Box>
           </Flex>

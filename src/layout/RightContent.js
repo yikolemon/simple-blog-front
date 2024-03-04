@@ -36,7 +36,7 @@ const RightContent = () => {
       direction="column"
       bg="#f9f9f9"
       color="#777"
-      boxShadow="md"
+      // boxShadow="md"
       p={4}
       textAlign="center"
       height="100%"

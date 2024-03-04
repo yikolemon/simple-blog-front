@@ -5,7 +5,11 @@ import { VscHome,VscSearch  } from "react-icons/vsc";
 const Header = () => {
 
   return (
-    <Box bg="#f9f9f9" color="myGray" p={4} color="#777" boxShadow="md">
+    <Box bg="#f9f9f9"
+         color="myGray"
+         p={4} color="#777"
+         // boxShadow="md"
+    >
       <Flex alignItems="center">
         <Flex flex={1} alignItems="center">
           <Icon as={VscHome} boxSize={6} mr={2} />

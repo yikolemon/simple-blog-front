@@ -15,7 +15,7 @@ const LeftContent = () => {
       direction="column"
       bg="#f9f9f9"
       color="#777"
-      boxShadow="md"
+      // boxShadow="md"
       p={4}
       textAlign="center"
       height="100%" // 设置整个 Flex 容器的高度为 100%

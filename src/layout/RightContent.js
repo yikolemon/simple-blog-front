@@ -1,5 +1,8 @@
 // RightContent.js
 
+import { GoFlame } from "react-icons/go";
+
+
 import React from 'react';
 import {
   Box,
@@ -17,15 +20,13 @@ import {
 const BlogLink = ({ title, likesCount }) => {
   return (
     <Flex align="center" mb={4}>
-      <Box flex="1" overflow="hidden" textOverflow="ellipsis" whiteSpace="nowrap">
+      <Flex align={"center"}>
+        <Box as={GoFlame} />
+        <Text mr={2}>{likesCount}</Text>
+      </Flex>
         <div title={title}> {/* 使用 title 属性来显示完整的标题 */}
           <Text>{title.length > 9 ? `${title.slice(0, 9)}...` : title}</Text>
         </div>
-      </Box>
-      <Flex align="center">
-        <Box>👍</Box>
-        <Box ml={1}>{likesCount}</Box>
-      </Flex>
     </Flex>
   );
 };
@@ -64,33 +65,14 @@ const RightContent = () => {
                 alignItems='center'
                 justifyContent='center'
               >
-                <Box>
-                  <div>
-                    <a>这是一篇博客1</a>
-                  </div>
-                </Box>
+                <BlogLink title="博客标题1" likesCount={15} />
               </Flex>
               <Flex
                 h='40px'
                 alignItems='center'
                 justifyContent='center'
               >
-                <Box>
-                  <div>
-                    <a>这是一篇博客2</a>
-                  </div>
-                </Box>
-              </Flex>
-              <Flex
-                h='40px'
-                alignItems='center'
-                justifyContent='center'
-              >
-                <Box>
-                  <div>
-                    <a>这是一篇博客3</a>
-                  </div>
-                </Box>
+                <BlogLink title="博客标题1" likesCount={15} />
               </Flex>
             </VStack>
           </TabPanel>
@@ -101,9 +83,6 @@ const RightContent = () => {
               spacing={4}
               align='stretch'
             >
-              <BlogLink title="博客标题1" likesCount={15} />
-              <BlogLink title="博客标题2这是一个非常长的标题" likesCount={20} />
-              <BlogLink title="博客标题3" likesCount={10} />
             </VStack>
           </TabPanel>
         </TabPanels>
